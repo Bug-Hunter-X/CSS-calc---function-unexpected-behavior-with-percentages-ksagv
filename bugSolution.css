@@ -1,0 +1,19 @@
+/* bugSolution.css */
+/* The issue lies in how calc() handles percentages within a parent container. 
+   The percentage is calculated based on the parent container's size, and if there are other units in the calculation,
+   the resulting value might not be what you expect.
+   Instead of relying on calc() in this case, set explicit dimensions or use other CSS techniques to achieve the desired effect. */
+
+#container {
+  width: 500px;
+  height: 300px;
+}
+
+#element {
+  /* Using calc() - incorrect result */
+  /* width: calc(50% - 50px); */
+  /* Using explicit values - correct result */
+  width: 200px;
+  height: 100px;
+  background-color: blue; 
+} 
